@@ -1,1 +1,89 @@
-// Specific CSS for your home-page
+.navbar_name {
+    margin-right: 1000px;
+}
+.main_content {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 18rem;
+}
+
+.pig-logo {
+    width: 75px;
+}
+.classes_offered {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.teacher_img {
+    width: 53%;
+    justify-content: center;
+    border-radius: 12%;
+    margin-left: 23%;
+}
+.teacher_info {
+    margin-top: 6%;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    margin-right: 5rem;
+}
+.main_title {
+    margin-left: 8rem;
+    margin-top: 2rem;
+    width: 24%;
+}
+.main_text {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.main_picture {
+    width: 42rem;
+    height: 24rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+.footer {
+    background: #F4F4F4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: rgba(0,0,0,0.3);
+    margin-top: 9rem;
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  .footer-links a {
+    color: black;
+    opacity: 0.15;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+  .footer-links a:hover {
+    opacity: 1;
+  }
+  .footer .fa-heart {
+    color: #D23333;
+  }
+  .courses_page {
+    display: flex;
+    justify-content: space-evenly;
+  }
