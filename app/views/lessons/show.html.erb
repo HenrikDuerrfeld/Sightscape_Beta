@@ -1,0 +1,14 @@
+<%= @lesson.teacher%>
+<p><%= @lesson.description%></p>
+<p>Available hours with <%= @lesson.teacher%>:</p>
+<%= link_to "Available time slots", lessons_path, class: "writting nav-link" %>
+  <% @lessons.each do |lesson| %>
+    <div class="card" style="width: 18rem; margin-top: 2%;">
+      <div class="card-body">
+            <h5 class="card-title"><%= lesson.lesson_date %></h5>
+            <p class="card-text"><%= lesson.start_time%></p>
+            <p class="card-text"><%= lesson.end_time%></p>
+            <%= link_to 'Book', "#", class: "btn btn-warning", style:"border-radius: 1rem; margin-left: 5.4rem;" %>
+      </div>
+    </div>
+  <% end %>

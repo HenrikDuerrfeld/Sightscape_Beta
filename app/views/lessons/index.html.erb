@@ -1,0 +1,14 @@
+<div class="lessons_offered" style="background: #F4F4F4 mt-4">
+  <% @lessons.each do |lesson| %>
+    <div class="card" style="width: 18rem; margin-top: 2%;">
+      <div class="card-body">
+          <img class="lesson_img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%3Fid%3DOIP.DnTA1lo0-VKlNFLJ5WktpgHaGF%26pid%3DApi&f=1" alt="Card image cap">
+            <div class="teacher_info">
+            <h5 class="card-title"><%= lesson.teacher%></h5>
+            <p class="card-text"><%= lesson.description%></p>
+            <%= link_to 'Book', lesson_path(lesson), class: "btn btn-warning", style:"border-radius: 1rem; margin-left: 5.4rem;" %>
+          </div>
+      </div>
+    </div>
+  <% end %>
+<div>
