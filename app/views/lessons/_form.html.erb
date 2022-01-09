@@ -4,6 +4,7 @@
     <%= simple_form_for @lesson do |f| %>
       <%= f.input :teacher %>
       <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
       <%= f.submit "Submit", class:"form-actions btn btn-outline-primary rounded mb-3"%>
       <%= link_to "back", lessons_path, class:"form-actions btn btn-outline-primary rounded mb-3"%>
     <% end %>

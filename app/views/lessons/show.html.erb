@@ -1,14 +1,12 @@
-<%= @lesson.teacher%>
-<p><%= @lesson.description%></p>
-<p>Available hours with <%= @lesson.teacher%>:</p>
-<%= link_to "Available time slots", lessons_path, class: "writting nav-link" %>
-  <% @lessons.each do |lesson| %>
-    <div class="card" style="width: 18rem; margin-top: 2%;">
-      <div class="card-body">
-            <h5 class="card-title"><%= lesson.lesson_date %></h5>
-            <p class="card-text"><%= lesson.start_time%></p>
-            <p class="card-text"><%= lesson.end_time%></p>
-            <%= link_to 'Book', "#", class: "btn btn-warning", style:"border-radius: 1rem; margin-left: 5.4rem;" %>
-      </div>
-    </div>
-  <% end %>
+
+<div class="card col-sm-12 col-md-6 mr-0 ml-0" style="width: 36rem; text-align: left; margin: auto; margin-top: 24px;">
+  <img src='<%= @lesson.photo.attached? ? (cl_image_path @lesson.photo.key, crop: :fill) : 'https://source.unsplash.com/random'%>' class="card-img-top mt-3" alt='photo' style= "height: 250px; object-fit: cover;">
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center; color: rgb(245, 122, 143);"><%= @lesson.teacher_name %></h5>
+    <p class="card-text"><i class="fas fa-lessongy-bank mr-4"></i><%= @lesson.description %></p>
+    <p><i class="fas fa-hand-holding-usd mr-4"></i><%= @lesson.price %>€/day</p>
+    <p><i class="fas fa-map-marker-alt mr-4"></i><%= @lesson.time %></p>
+    <p><i class="fab fa-odnoklassniki mr-4"></i><%= @lesson.time_zone %></p>
+    <p><i class="fab fa-odnoklassniki mr-4"></i><%= @lesson.date %></p>
+  </div>
+</div>
