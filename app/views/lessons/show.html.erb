@@ -1,6 +1,10 @@
 
 <div class="card col-sm-12 col-md-6 mr-0 ml-0" style="width: 36rem; text-align: left; margin: auto; margin-top: 24px;">
-  <img src='<%= @lesson.photo.attached? ? (cl_image_path @lesson.photo.key, crop: :fill) : 'https://source.unsplash.com/random'%>' class="card-img-top mt-3" alt='photo' style= "height: 250px; object-fit: cover;">
+  <% if @lesson.photo.attached? %>
+    <img src=' <%= @lesson.photo %>' class="card-img-top mt-3" alt='photo' style= "height: 250px; object-fit: cover;">
+  <% else %>
+    <img src=' https://source.unsplash.com/random' class="card-img-top mt-3" alt='photo' style= "height: 250px; object-fit: cover;">
+  <% end %>
   <div class="card-body">
     <h5 class="card-title" style="text-align: center; color: rgb(245, 122, 143);"><%= @lesson.teacher_name %></h5>
     <p class="card-text"><i class="fas fa-lessongy-bank mr-4"></i><%= @lesson.description %></p>
