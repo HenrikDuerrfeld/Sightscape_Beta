@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :classes, only: [:show, :update, :edit, :create, :destroy, :index, :new]
   resources :time_slots, only: [:index, :show, :new, :create, :destroy]
-  resources :lessons, only: [:index, :show, :new, :create, :destroy]
+  resources :lessons
   resources :courses, only: [:index]
   resources :bookings, only: [:new, :create]
   resources :pricing, only: [:index]
